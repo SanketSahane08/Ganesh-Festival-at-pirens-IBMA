@@ -1,0 +1,79 @@
+.scrollable {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 20px 0;
+}
+
+/* Slide class for each image */
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensures all images are the same size */
+.scroling {
+    width: 100%;
+    height: auto;
+    max-width: 100%;  /* Full width for mobile devices */
+    max-height: 250px; /* Restrict height to avoid large images on small screens */
+    object-fit: cover; /* Ensures the image is resized to fill the container while maintaining aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners to images */
+}
+
+/* Responsive styles for tablets and larger screens */
+@media (min-width: 768px) {
+    .scroling {
+        max-width: 400px;
+        max-height: 300px;
+    }
+}
+
+/* Responsive styles for larger screens like desktops */
+@media (min-width: 992px) {
+    .scroling {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+.image-side img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .description-side {
+    height: 100vh; /* Full height for proper vertical alignment */
+    padding-top: 20px;
+  }
+
+  .zoom-img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.1);
+  }
+
+
+    .eco-tip {
+      margin-bottom: 2rem;
+    }
+    .eco-tip img {
+      width: 100%;
+      height: 200px; /* Set a fixed height */
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+      border-radius: 8px;
+    }
+    .eco-tip h5 {
+      margin-top: 1rem;
+    }
+    .container {
+      padding-top: 2rem;
+    }
